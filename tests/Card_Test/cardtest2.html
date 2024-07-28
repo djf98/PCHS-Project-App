@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #card {
+            width: 150px; /* Adjust the width to accommodate the full card */
+            height: 220px; /* Adjust the height to accommodate the full card */
+            border: 1px solid #000;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: auto;
+            display: none;
+            background-size: cover;
+            background-position: center;
+        }
+    </style> 
+</head>
+<body>
+    <div class="container">
+        <h1>Card Test</h1>
+        <p id="message">This test will consist of showing four cards. On the fourth card, you will have to answer wether it is the same as the first card that was shown or not.</p>
+        <button id="readyButton">Ready</button>
+        <div id="card"></div>
+        
+        
+        <div class="center">
+            
+            <button id="SameButton" style="display: none;">Same as first</button>
+            <button id="DiffButton" style="display: none;">Different from first</button>
+            <button id="NextButton" style="display: none;">Next card</button>
+        </div>
+        
+        <p id="resultMessage"></p>
+    </div>
+    <script src="cardtest2.js"></script>
+</body>
+</html>

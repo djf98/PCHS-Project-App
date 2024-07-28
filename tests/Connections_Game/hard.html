@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connections Game</title>
+    <link rel="stylesheet" href="stylehard.css">
+</head>
+<body>
+    <div id="start-screen" class="modal">
+        <div class="modal-content">
+            <p>In this test you will need to pick a group of 4 words that correspond to a certain theme. Good luck!</p>
+            <button id="start-game">Start Game</button>
+        </div>
+    </div>
+    <div id="game-container"></div>
+    <div id="completed-groups"></div>
+    <div id="message-modal" class="modal">
+        <div class="modal-content">
+            <p id="message-text"></p>
+            <button id="message-ok">OK</button>
+        </div>
+    </div>
+    <div id="congrats-modal" class="modal">
+        <div class="modal-content">
+            <p>Congratulations!</p>
+            <p>Time taken: <span id="time-taken"></span></p>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+    <div id="home-button-container">
+        <button id="home-button" style="display: none;">Home</button>
+    </div>
+    <script src="scripthard.js"></script>
+</body>
+</html>

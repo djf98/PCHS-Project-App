@@ -132,18 +132,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
     
+    for(let i = 0; i < 5; i++){
+        const shuffledCards = shuffle(temp_cards);
 
+        // Display four cards, one at a time
+        //let index = 0;
+        
+        const cardElement = document.getElementById('card');
+        const nextButton = document.getElementById('nextButton');
+        let first_card;
 
+        
+        nextButton.addEventListener('click', showNextCard);
+    }
 
-
-    const shuffledCards = shuffle(temp_cards);
-
-    // Display four cards, one at a time
-    let index = 0;
-    const cardElement = document.getElementById('card');
-    const nextButton = document.getElementById('nextButton');
-    let first_card;
-
+    
     function showNextCard() {
         var button1 = document.createElement("button");
         var button2 = document.createElement("button");
@@ -153,16 +156,37 @@ document.addEventListener('DOMContentLoaded', function() {
         button2.textContent = "no";
 
         // Add an event listener to handle button click
+        
         button1.addEventListener("click", function() {
-            alert("Button clicked!");
-        });
+            if(cardImageURL == first_card){
+                alert("Correct!");    
+            }
+            else{
+                alert("Incorrect");
+            }
+            console.log(first_card);
+            console.log(cardImageURL);
+            //reset();
+            container1.parentNode.removeChild(container1);
+            container2.parentNode.removeChild(container2);
+            
+            });
+        
         button2.addEventListener("click", function() {
-            alert("Button clicked!");
+            if(cardImageURL != first_card){
+                alert("Correct!");    
+            }
+            else{
+                alert("Incorrect");
+            }
+            console.log(first_card);
+            console.log(cardImageURL);
+            //reset();
+            container1.parentNode.removeChild(container1);
+            container2.parentNode.removeChild(container2);
+            //nextButtonContainer.appendChild(nextButton);
         });
-
-
-
-
+        
 
         if (index < cards.length) {
             var cardImageURL = shuffledCards[index++];
@@ -177,7 +201,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 //document.location.href = '../html/newpage.html'
                 if(rn(2)==0){
                     const cardElement = document.getElementById('card');
-                    cardElement.style.backgroundImage = `url(${first_card})`;
+                    cardImageURL = first_card
+                    cardElement.style.backgroundImage = `url(${cardImageURL})`;
                     cardElement.style.display = 'block';    
                 }
                 else{
@@ -188,8 +213,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 var container1 = document.getElementById("button-container");
                 var container2 = document.getElementById("button-container2");
+
+                //remove next button
+                //var nextButtonContainer = document.getElementById("nextButton");
+                //nextButton.parentNode.removeChild(nextButton);
+                index = 0;
                 container1.appendChild(button1);
                 container2.appendChild(button2);
+
             }
             else{
                 cardElement.style.backgroundImage = `url(${cardImageURL})`;
@@ -202,23 +233,132 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
     }
-    function test_case(){
-        const cardElement = document.getElementById('card');
-        cardElement.style.backgroundImage = `url(${first_card})`;
+
+
+    /*
+    const shuffledCards = shuffle(temp_cards);
+    
+    // Display four cards, one at a time
+    let index = 0;
+    const cardElement = document.getElementById('card');
+    const nextButton = document.getElementById('nextButton');
+    let first_card;
+    
+    function showNextCard() {
+        var button1 = document.createElement("button");
+        var button2 = document.createElement("button");
+        
+        // Set the button's text content
+        button1.textContent = "yes";
+        button2.textContent = "no";
+        
+        // Add an event listener to handle button click
+        
+        button1.addEventListener("click", function() {
+            if(cardImageURL == first_card){
+                alert("Correct!");    
+            }
+            else{
+                alert("Incorrect");
+        }
+        console.log(first_card);
+        console.log(cardImageURL);
+        //reset();
+        container1.parentNode.removeChild(container1);
+        container2.parentNode.removeChild(container2);
+        
+    });
+    
+    button2.addEventListener("click", function() {
+        if(cardImageURL != first_card){
+            alert("Correct!");    
+        }
+        else{
+            alert("Incorrect");
+    }
+    console.log(first_card);
+    console.log(cardImageURL);
+    //reset();
+    container1.parentNode.removeChild(container1);
+    container2.parentNode.removeChild(container2);
+    //nextButtonContainer.appendChild(nextButton);
+});
+
+
+
+
+
+
+
+if (index < cards.length) {
+    var cardImageURL = shuffledCards[index++];
+    if (index == 1){
+        first_card = cardImageURL;
+        
+        cardElement.style.backgroundImage = `url(${cardImageURL})`;
         cardElement.style.display = 'block';
     }
-
-    // Function to shuffle the deck
-    function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
+    if (index == 4){
+        //window.open('../html/newpage.html');
+        //document.location.href = '../html/newpage.html'
+        if(rn(2)==0){
+            const cardElement = document.getElementById('card');
+            cardImageURL = first_card
+            cardElement.style.backgroundImage = `url(${cardImageURL})`;
+            cardElement.style.display = 'block';    
         }
-        return array;
+        else{
+            const cardElement = document.getElementById('card');
+        cardElement.style.backgroundImage = `url(${cardImageURL})`;
+        cardElement.style.display = 'block';
+        
     }
+    var container1 = document.getElementById("button-container");
+    var container2 = document.getElementById("button-container2");
+    
+    //remove next button
+    var nextButtonContainer = document.getElementById("nextButton");
+    nextButtonContainer.parentNode.removeChild(nextButtonContainer);
+    
+    container1.appendChild(button1);
+    container2.appendChild(button2);
+    
+}
+else{
+    cardElement.style.backgroundImage = `url(${cardImageURL})`;
+cardElement.style.display = 'block';
+}
 
+} 
+else {
+    alert(`All cards have been shown. Last card same as first: ${isLastCardSameAsFirst}`);
+}
+
+}
+function test_case(){
+    const cardElement = document.getElementById('card');
+    cardElement.style.backgroundImage = `url(${first_card})`;
+    cardElement.style.display = 'block';
+}
+*/
+
+// Function to shuffle the deck
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+/*
+function reset(){
+    // function to reset test once test buttons have been clicked
+    container1.parentNode.removeChild(container1);
+    container2.parentNode.removeChild(container2);
+}
+    */
     // Add click event to show the next card when the button is clicked
-    nextButton.addEventListener('click', showNextCard);
+    //nextButton.addEventListener('click', showNextCard);
 
     // Initial display of the first card
     //start_test();
