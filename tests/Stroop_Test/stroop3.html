@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Stroop Effect - Text and Color Only</title>
+<script language="Javascript">
+
+var NowDate =new Date();
+var timeOne
+var timeTwo
+var timer
+
+function startIt() {
+		timeOne=NowDate.getTime();
+}
+
+function endIt() {
+timeTwo=new Date();
+timeTwo=timeTwo.getTime();
+timer=((timeTwo-timeOne)/1000);
+alert("It took you "+timer+" seconds.  Compare this time with that of the other test.  Is there a difference?");
+
+}
+
+//document.forms[0].elements[0].value=(timer);
+</script>
+</head>
+
+<body onload="startIt()";>
+
+<p>
+<Center><h2>Word Set #2</h2>
+<img src = "stroopb.png">
+<p>
+<form>
+<input type="button" value=" Finish " onclick="endIt()";>
+</FORM>
+<A HREF = "stroop.html#seffect">Back to Stroop Effect</A>
+</center></body>
+</html>
