@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Settings</title>
+    <link rel="stylesheet" href="gameStyle.css">
+</head>
+<body>
+    <div class="settings-container">
+        <h1>Game Settings</h1>
+        <div class="setting">
+            <label for="rounds">Number of Rounds:</label>
+            <input type="number" id="rounds" min="1" max="20" value="5">
+        </div>
+        <div class="setting">
+            <label for="sequence-length">Sequence Length:</label>
+            <input type="number" id="sequence-length" min="3" max="10" value="5">
+        </div>
+        <div class="setting">
+            <label for="display-time">Display Time (seconds):</label>
+            <input type="number" id="display-time" min="0.5" max="5" step="0.1" value="1">
+        </div>
+        <div class="setting">
+            <label for="game-mode">Game Mode:</label>
+            <select id="game-mode">
+                <option value="normal">Normal (Repeat Sequence)</option>
+                <option value="reverse">Reverse (Enter Reverse Order)</option>
+            </select>
+        </div>
+        <button id="save-settings">Save Settings</button>
+        <a href="gameIndex.html" class="button">Back to Game</a>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>

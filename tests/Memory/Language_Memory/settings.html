@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbal Memory Test - Settings</title>
+    <link rel="stylesheet" href="gameStyle.css">
+</head>
+<body>
+    <div class="settings-container">
+        <h1>Game Settings</h1>
+        <form id="settings-form">
+            <div class="setting">
+                <label for="grid-size">Grid Size:</label>
+                <select id="grid-size" name="grid-size">
+                    <option value="4">4x4</option>
+                    <option value="5">5x5</option>
+                    <option value="6" selected>6x6</option>
+                    <option value="7">7x7</option>
+                </select>
+            </div>
+            <div class="setting">
+                <label for="subject-tiles">Number of Subject Tiles:</label>
+                <input type="number" id="subject-tiles" name="subject-tiles" min="1" max="10" value="10">
+            </div>
+            <button type="submit">Save Settings</button>
+        </form>
+        <a href="index.html" class="button">Back to Game</a>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>

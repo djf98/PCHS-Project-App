@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    padding: 0;
+    border: none;
+    font-size: 14px;
+}
+
+
+#instructions {
+    margin-bottom: 1rem;
+}
+
+#input-area {
+    margin-bottom: 1rem;
+}
+
+input[type="number"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#results {
+    margin-top: 1rem;
+}
+
+/* Add these styles to your existing CSS */
+
+.setting {
+    margin-bottom: 1rem;
+}
+
+.setting label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.setting input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100px;
+}
+
+/* Style for text input without spinner */
+input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100px;
+    appearance: textfield; /* Firefox */
+}
+
+input[type="text"]::-webkit-outer-spin-button,
+input[type="text"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background-color: #45a049;
+}

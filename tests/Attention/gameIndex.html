@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Sequence Game</title>
+    <link rel="stylesheet" href="gameStyle.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="main-game">
+            <h1>Number Sequence Game</h1>
+            <div id="round-display">Round: 1 / 5</div>
+            <div id="game-area">
+                <div id="number-display"></div>
+                <input type="text" id="user-input" placeholder="Enter the sequence" disabled>
+                <button id="start-button">Start Game</button>
+                <button id="submit-button" disabled>Submit</button>
+            </div>
+            <div id="result"></div>
+            <a href="homeIndex.html" class="button">Back to Home</a>
+            <a href="settings.html" class="button">Settings</a>
+        </div>
+        <div class="score-box">
+            <h2>Incorrect Numbers</h2>
+            <div id="score">0</div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serial 7s Test</title>
+    <link rel="stylesheet" href="series7Style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Serial 7s Test</h1>
+        <p id="instructions">Count by subtracting 7 from 100, and then, keep subtracting 7 from your answer until you've made the required number of subtractions.</p>
+        <div id="input-area">
+            <input type="text" id="answer" placeholder="Enter your answer" pattern="\d*">
+            <button id="submit">Submit</button>
+        </div>
+        <div id="results">
+            <p>Your answers: <span id="answers"></span></p>
+            <p>Score: <span id="score"></span></p>
+        </div>
+        <button id="start">Start Test</button>
+        <a href="homeIndex.html" class="button"> Back to Home</a>
+        <a href="settings7.html" class="button">Settings</a>
+    </div>
+    <script src="series7.js"></script>
+</body>
+</html>

@@ -114,6 +114,7 @@ function show_cards(){
 
         card_image = draw_random_card();
         let num = random_number(2);
+        console.log(num);
         if(num == 0){
             card_image = first_card;
             card.style.backgroundImage = `url(${card_image})`;
