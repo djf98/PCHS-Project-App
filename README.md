@@ -1,8 +1,27 @@
-# GitHub page for PCHS Neurocognitive Test
+# Synaptic Scope
 
-`home.html` is the homepage for the website. This will be the landing page for the app.
+Synaptic Scope aims to provide a free and open source alternative to congitive assessments
 
-Within `home.html` there will be links to the various tests we will implement
+Included are various easy to use and customizable neurocognitive tests that span various cognitive domains.
 
-All tests that we implement should be stored in the `tests/` directory, with the .html and .js files stored in the `tests/html/` and `tests/script` directories, respectively.
 
+
+To use Synaptic Scope, simply download or clone this repository and open `home.html` in a browser.
+
+<p>
+  <br/>
+  <img width="400" alt="VerbalMemoryTest" src="https://github.com/user-attachments/assets/05ba0b7d-ddb7-4ed8-9386-d27eb8c71292"> 
+  
+  <em>Verbal Memory Test</em>
+  
+</p>
+<br/>
+<p>
+
+  
+  <img width="400" alt="VisualMemoryTest" src="https://github.com/user-attachments/assets/ae8fe6f3-660b-4188-ab77-9b1f9aae851f"> 
+  
+  <em>Visual Memory Test</em>
+</p>
+<br/>
+Developed by the PCHS Club at Pitt
